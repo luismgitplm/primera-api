@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use app\Http\Controllers\AuthController;
 use app\Http\Controllers\PostController;
+use App\Http\Controllers\ApiProductoController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -16,3 +17,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::apiResource('posts', PostController::class);
 });
+
+
+Route::apiResource('productos', ApiProductoController::class);
