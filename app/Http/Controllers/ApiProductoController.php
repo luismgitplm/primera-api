@@ -61,14 +61,27 @@ class ApiProductoController extends Controller
      */
     public function update(Request $request, Producto $producto)
     {
-        //
+        $producto->update($request->all());
+
+        return response()->json([
+            'status' => true,
+            'message' => 'Producto actualizado correctamente!',
+            'producto' => $producto
+        ]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Producto $producto)
-    {
-        //
-    }
+{
+    $producto->delete();
+
+    return response()->json([
+        'status' => true,
+        'message' => 'Producto eliminado correctamente!',
+        'producto' => $producto
+    ]);
+}
+
 }

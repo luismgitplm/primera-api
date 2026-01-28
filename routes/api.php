@@ -2,8 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\AuthController;
-use app\Http\Controllers\PostController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ApiProductoController;
 
 Route::get('/user', function (Request $request) {
