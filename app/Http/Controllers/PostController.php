@@ -15,6 +15,10 @@ class PostController extends Controller
         //
     }
 
+    public function indexOne(Request $request){
+
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -34,7 +38,7 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show($id)
     {
         //
     }

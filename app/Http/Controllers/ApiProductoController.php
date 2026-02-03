@@ -43,10 +43,18 @@ class ApiProductoController extends Controller
         'producto' => $producto
     ], 200);
  }
-    public function show(Producto $producto)
+
+
+    public function show($id)
     {
-        //
+        $producto = Producto::findOrFail($id);
+
+        return response()->json([
+            'status' => true,
+            'producto' => $producto
+        ]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
